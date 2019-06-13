@@ -11,6 +11,7 @@
   <modules>
     <module>simple-factory</module>
     <module>chain</module>
+    <module>converter</module>
   </modules>
 
   <properties>
