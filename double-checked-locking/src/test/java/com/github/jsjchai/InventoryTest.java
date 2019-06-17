@@ -3,8 +3,8 @@ package com.github.jsjchai;
 import static java.time.Duration.ofMillis;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTimeout;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -13,6 +13,14 @@ import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.Test;
 
 public class InventoryTest {
+
+    @Test
+    public void testUnmodifiableList(){
+        Inventory inventory = new Inventory(1);
+        inventory.addItem(new Item());
+
+        assertThrows(UnsupportedOperationException.class,()->inventory.getItems().add(new Item()));
+    }
 
     @Test
     public void testAddItem(){

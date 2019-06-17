@@ -44,7 +44,7 @@ public class Inventory {
     }
 
     /**
-     * 获取所有库存商品
+     * 获取所有库存商品,只读
      *
      * @return  返回不可变的所有库存商品
      */

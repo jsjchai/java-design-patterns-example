@@ -12,6 +12,7 @@
     <module>simple-factory</module>
     <module>chain</module>
     <module>converter</module>
+    <module>double-checked-locking</module>
   </modules>
 
   <properties>
