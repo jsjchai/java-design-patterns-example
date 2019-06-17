@@ -11,10 +11,10 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Inventory {
 
-
-
     private final int inventorySize;
+
     private final List<Item> items;
+
     private final Lock lock;
 
 
